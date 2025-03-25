@@ -19,6 +19,14 @@ public class test2 {
                 System.out.println("you can't do that");
                 panel.remove(oc);
                 panel.remove(hi);
+                JButton back = new JButton("Back");
+                panel.add(back);
+                back.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent a) {
+                        frame.dispose();
+                        main(null);
+                    }
+                });
             }
         });
         hi.addActionListener(new ActionListener() {
@@ -27,6 +35,14 @@ public class test2 {
                 System.out.println("hello there");
                 panel.remove(oc);
                 panel.remove(hi);
+                JButton back = new JButton("Back");
+                panel.add(back);
+                back.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent a) {
+                        frame.dispose();
+                        main(null);
+                    }
+                });
             }
         });
 
