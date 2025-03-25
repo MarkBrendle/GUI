@@ -8,10 +8,21 @@ import java.awt.event.ActionListener;
 public class Start {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Start");
+        JFrame frame2 = new JFrame("Two");
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
-        JLabel label = new JLabel("Welcome to the game!");
+        JLabel label = new JLabel("Bios");
         JButton button = new JButton("Start");
+        JButton button2 = new JButton("Exit");
+        JPanel panel2 = new JPanel();
+        
+        JLabel label2 = new JLabel("System");
+        button2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                panel2.setLayout(new FlowLayout());
+                frame2.dispose();
+            }
+        });
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
@@ -19,9 +30,13 @@ public class Start {
         });
         panel.add(label);
         panel.add(button);
+        panel.add(button2);
         frame.add(panel);
-        frame.setSize(300, 300);
+        frame.setSize(500, 500);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        frame2.add(panel2);
+        frame2.setSize(500, 500);
         frame.setVisible(true);
     }
 
