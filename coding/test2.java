@@ -12,11 +12,21 @@ public class test2 {
         panel.setLayout(new FlowLayout());
         JLabel label = new JLabel("hello");
         JButton oc = new JButton("OC ");
-        JButton hi = new JButton("");
+        JButton hi = new JButton("Components");
         oc.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 label.setText("OC");
                 System.out.println("you can't do that");
+                panel.remove(oc);
+                panel.remove(hi);
+            }
+        });
+        hi.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent a) {
+                label.setText("Components");
+                System.out.println("hello there");
+                panel.remove(oc);
+                panel.remove(hi);
             }
         });
 
