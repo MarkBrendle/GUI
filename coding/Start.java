@@ -36,6 +36,7 @@ public class Start {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame2.add(panel2);
+        panel2.add(label2);
         frame2.setSize(500, 500);
         frame.setVisible(true);
     }

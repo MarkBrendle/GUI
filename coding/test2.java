@@ -11,18 +11,19 @@ public class test2 {
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
         JLabel label = new JLabel("hello");
-        JButton button = new JButton("OC ");
-        button.addActionListener(new ActionListener() {
+        JButton oc = new JButton("OC ");
+        JButton hi = new JButton("");
+        oc.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 label.setText("OC");
                 System.out.println("you can't do that");
-                
             }
         });
 
         frame.add(panel);
         panel.add(label);
-        panel.add(button);
+        panel.add(oc);
+        panel.add(hi);
         frame.setSize(500, 500);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
