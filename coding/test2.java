@@ -13,6 +13,12 @@ public class test2 {
         JLabel label = new JLabel("hello");
         JButton oc = new JButton("OC ");
         JButton hi = new JButton("Components");
+        JButton exit = new JButton("Exit");
+        exit.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent b) {
+                System.exit(0);
+            }
+        });
         oc.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 label.setText("OC");
@@ -23,6 +29,7 @@ public class test2 {
                 panel.add(back);
                 back.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent a) {
+                        System.out.println("please work");
                         frame.dispose();
                         main(null);
                     }
@@ -50,6 +57,7 @@ public class test2 {
         panel.add(label);
         panel.add(oc);
         panel.add(hi);
+        panel.add(exit);
         frame.setSize(500, 500);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
