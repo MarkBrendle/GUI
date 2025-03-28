@@ -58,7 +58,7 @@ public class test2 {
         panel.add(oc);
         panel.add(hi);
         panel.add(exit);
-        frame.setSize(500, 500);
+        frame.setSize(2000, 700);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
