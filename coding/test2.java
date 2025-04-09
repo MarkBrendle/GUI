@@ -12,6 +12,8 @@ public class test2 {
         panel.setLayout(null); // Set layout to null for absolute positioning
         JLabel label = new JLabel("hello");
         label.setBounds(235, 20, 100, 30); // Position and size of the label
+        JLabel labela = new JLabel("Enable auto overclock.");
+        labela.setBounds(50, 100, 200, 30); // Position and size of the label2
         JButton oc = new JButton("OC ");
         oc.setBounds(200, 50, 100, 30); // Position and size of the OC button
         JButton hi = new JButton("Components");
@@ -32,10 +34,27 @@ public class test2 {
                 panel.remove(oc);
                 panel.remove(hi);
                 JButton back = new JButton("Back");
-                back.setBounds(50, 220, 100, 30); // Position and size of the Back button
+                back.setBounds(50, 50, 100, 30); // Position and size of the Back button
                 panel.add(back);
+                JButton enable = new JButton("Enable");
+                enable.setBounds(200, 100, 100, 30); // Position and size of the Enable button
+                panel.add(enable);
+                panel.add(labela); // Add the labela to the panel
                 panel.revalidate();
                 panel.repaint();
+                enable.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent d) {
+                        System.out.println("Overclock enabled");
+                        enable.setText("Disable");
+                        enable.removeActionListener(this); // Remove the previous action listener
+                        enable.addActionListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent d) {
+                                System.out.println("Overclock disabled");
+                                enable.setText("Enable");
+                            } 
+                        });
+                    }
+                });
                 back.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent a) {
                         System.out.println("please work");
@@ -49,11 +68,12 @@ public class test2 {
         hi.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent a) {
                 label.setText("Components");
+                label.setBounds(200, 20, 100, 30);
                 System.out.println("hello there");
                 panel.remove(oc);
                 panel.remove(hi);
                 JButton back = new JButton("Back");
-                back.setBounds(50, 220, 100, 30); // Position and size of the Back button
+                back.setBounds(70, 50, 100, 30); // Position and size of the Back button
                 panel.add(back);
                 panel.revalidate();
                 panel.repaint();
