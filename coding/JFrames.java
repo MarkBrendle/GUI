@@ -17,11 +17,55 @@ public class JFrames {
         c.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent d){
                 JLabel g = new JLabel();
-                g.setBounds(0, 0, 100,50);
+                g.setBounds(230, 200, 100,50);
                 b.add(g);
-                for (int i = 10; i >= 1; i--){
+                c.setBounds(600, 600, 10,10);
+                JLabel j = new JLabel("please select a password");
+                b.add(j);
+                j.setBounds(175, 150, 300, 50);
+                /*for (int i = 100; i >= 1; i--){
                     g.setText("hello");
-                }
+                    System.out.println(i);
+                }*/
+                JButton k = new JButton("12345");
+                k.setBounds(100, 200, 100, 20);
+                b.add(k);
+                JButton l = new JButton("54321");
+                l.setBounds(300, 200, 100, 20);
+                b.add(l);
+                JButton m = new JButton("passord");
+                m.setBounds(100, 300, 100, 20);
+                b.add(m);
+                JButton n = new JButton("Password");
+                n.setBounds(300, 300, 100,20);
+                b.add(n);
+                k.addActionListener(new ActionListener(){
+                    public void actionPerformed(ActionEvent o) {
+                        System.exit(0);
+                    }
+                });
+                l.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent p) {
+                        System.exit(0);
+                    }
+                });
+                m.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent q) {
+                        JLabel s = new JLabel("Hello there");
+                        s.setBounds(175, 50, 100,20);
+                        b.add(s);
+                        k.setBounds(600,600,10,10);
+                        l.setBounds(600,600,10,10);
+                        m.setBounds(600,600,10,10);
+                        n.setBounds(600,600,10,10);
+                        a.remove(j);
+                    }
+                });
+                n.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent r) {
+                        System.exit(0);
+                    }
+                });
             }
         });
         h.addActionListener(new ActionListener(){
