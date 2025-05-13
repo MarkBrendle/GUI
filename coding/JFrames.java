@@ -58,7 +58,16 @@ public class JFrames {
                         l.setBounds(600,600,10,10);
                         m.setBounds(600,600,10,10);
                         n.setBounds(600,600,10,10);
-                        a.remove(j);
+                        j.setBounds(600,600,10,10);
+                        JButton t = new JButton("back");
+                        b.add(t);
+                        t.setBounds(250, 50, 100,20);
+                        t.addActionListener(new ActionListener() {
+                            public void actionPerformed(ActionEvent u) {
+                                a.dispose();
+                                main(null);
+                            }
+                        });
                     }
                 });
                 n.addActionListener(new ActionListener() {
