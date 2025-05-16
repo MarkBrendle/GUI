@@ -9,7 +9,7 @@ public class JFrames {
         JFrame a = new JFrame("Major Project");
         JPanel b = new JPanel();
         b.setLayout(null);
-        JButton c = new JButton( "Hello");
+        JButton c = new JButton( "Continue");
         c.setBounds(200, 50, 100, 30);
         JLabel f = new JLabel("hello");
         JButton h = new JButton("End");
@@ -23,10 +23,6 @@ public class JFrames {
                 JLabel j = new JLabel("please select a password");
                 b.add(j);
                 j.setBounds(175, 150, 300, 50);
-                /*for (int i = 100; i >= 1; i--){
-                    g.setText("hello");
-                    System.out.println(i);
-                }*/
                 JButton k = new JButton("12345");
                 k.setBounds(100, 200, 100, 20);
                 b.add(k);
@@ -51,9 +47,6 @@ public class JFrames {
                 });
                 m.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent q) {
-                        JLabel s = new JLabel("Hello there");
-                        s.setBounds(175, 50, 100,20);
-                        b.add(s);
                         k.setBounds(600,600,10,10);
                         l.setBounds(600,600,10,10);
                         m.setBounds(600,600,10,10);
@@ -61,7 +54,7 @@ public class JFrames {
                         j.setBounds(600,600,10,10);
                         JButton t = new JButton("back");
                         b.add(t);
-                        t.setBounds(250, 50, 100,20);
+                        t.setBounds(200, 50, 100,20);
                         t.addActionListener(new ActionListener() {
                             public void actionPerformed(ActionEvent u) {
                                 a.dispose();
